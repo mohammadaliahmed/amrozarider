@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "129072176949",
+    "firebase_url": "https://amrozapakistan1-default-rtdb.firebaseio.com",
+    "project_id": "amrozapakistan1",
+    "storage_bucket": "amrozapakistan1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129072176949:android:15b89555d33682092d367c",
+        "android_client_info": {
+          "package_name": "com.appsinventiv.amroza"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129072176949-0g24l4r19hoim4vnav90m8v1ri914unu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsrGn6VC87-lYcmIG4KjJT3WT880h0hFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129072176949-0g24l4r19hoim4vnav90m8v1ri914unu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129072176949:android:12a6389c69d2e1832d367c",
+        "android_client_info": {
+          "package_name": "com.appsinventiv.amrozaadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129072176949-0g24l4r19hoim4vnav90m8v1ri914unu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsrGn6VC87-lYcmIG4KjJT3WT880h0hFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129072176949-0g24l4r19hoim4vnav90m8v1ri914unu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129072176949:android:1865973f572269b62d367c",
+        "android_client_info": {
+          "package_name": "com.appsinventiv.amrozarider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129072176949-0g24l4r19hoim4vnav90m8v1ri914unu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsrGn6VC87-lYcmIG4KjJT3WT880h0hFA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129072176949-0g24l4r19hoim4vnav90m8v1ri914unu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
