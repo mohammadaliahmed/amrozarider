@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name="com.appsinventiv.amrozarider.ApplicationClass"
@@ -62,6 +64,7 @@
         </activity>
         <activity android:name=".Activities.ListOfOrders" />
         <activity android:name=".Activities.ViewOrder" />
+        <activity android:name=".Activities.GPSTrackerActivity" />
     </application>
 
 </manifest>
