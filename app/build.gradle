@@ -3,6 +3,9 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 30
+    lintOptions {
+        checkReleaseBuilds false
+    }
     defaultConfig {
         applicationId "com.appsinventiv.amrozarider"
         minSdkVersion 21

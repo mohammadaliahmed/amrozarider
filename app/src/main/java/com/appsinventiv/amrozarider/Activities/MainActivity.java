@@ -1,7 +1,9 @@
 package com.appsinventiv.amrozarider.Activities;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -18,6 +20,7 @@ import androidx.core.app.ActivityCompat;
 
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.appsinventiv.amrozarider.R;
@@ -37,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     TextView details;
     private double lng;
     private double lat;
+    Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.content_main);
 
         getPermissions();
+        logout = findViewById(R.id.logout);
         details = findViewById(R.id.details);
         assignedOrders = findViewById(R.id.assignedOrders);
 
@@ -70,7 +75,39 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ListOfOrders.class));
             }
         });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showALert();
 
+            }
+        });
+
+    }
+
+    private void showALert() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Alert");
+        builder.setMessage("Do you want to logout? ");
+
+        // add the buttons
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                SharedPrefs.logout();
+                Intent intent = new Intent(MainActivity.this, Splash.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+
+            }
+        });
+        builder.setNegativeButton("Cancel", null);
+
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     @Override
