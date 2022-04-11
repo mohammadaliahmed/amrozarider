@@ -82,15 +82,14 @@ public class ListOfOrders extends AppCompatActivity {
 
     private void getOrdersFromServer(String id) {
 
-        mDatabase.child("Orders").child(id).addValueEventListener(new ValueEventListener() {
+        mDatabase.child("Orders").child(id).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue() != null) {
-                    arrayList.clear();
+
                     OrderModel model = dataSnapshot.getValue(OrderModel.class);
                     if (model != null) {
                         arrayList.add(model);
-
 
                     }
 
@@ -104,10 +103,10 @@ public class ListOfOrders extends AppCompatActivity {
 
                         }
                     });
-                    adapter.notifyDataSetChanged();
+                    adapter.setItemList(arrayList);
+//                    adapter.notifyDataSetChanged();
                 } else {
-                    arrayList.clear();
-                    adapter.notifyDataSetChanged();
+
                 }
             }
 

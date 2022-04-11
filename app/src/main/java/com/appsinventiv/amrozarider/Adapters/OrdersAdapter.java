@@ -36,6 +36,11 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.ViewHolder
         this.itemList = itemList;
     }
 
+    public void setItemList(ArrayList<OrderModel> itemList) {
+        this.itemList = itemList;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
